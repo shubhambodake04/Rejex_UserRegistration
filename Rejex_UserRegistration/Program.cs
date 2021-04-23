@@ -7,7 +7,7 @@ namespace Rejex_UserRegistration
         static void Main(string[] args)
         {
             UserInfo userinfo = new UserInfo();
-            bool result = userinfo.validateUserInfo("ShubhamBodake");
+            bool result = userinfo.validateUserInfo("Shubhambodake");
             Console.WriteLine(result);
             Console.ReadKey();
         }

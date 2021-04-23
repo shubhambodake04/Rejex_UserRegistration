@@ -12,10 +12,12 @@ namespace Rejex_UserRegistration
         string Email = "^[a-z0-9A-Z]+([._+-@][a-z0-9A-Z]+)*[@][a-z0-9A-Z]+[.][a-zA-Z]{2,3}(.[a-zA-Z]{2})?$";
         string MobileNumber = "^[0-9]{2}[ ][1-9][0-9]{9}$";
         string Password = "^[a-zA-Z]{8,}";
+        string PasswordRule2 = "[A-Z][a-zA-Z]{7,}";
+
 
         public bool validateUserInfo(string input)
         {
-            return Regex.IsMatch(input, Password);
+            return Regex.IsMatch(input, PasswordRule2);
         }
     }
 }
