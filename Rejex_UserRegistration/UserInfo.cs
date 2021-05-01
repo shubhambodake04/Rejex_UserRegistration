@@ -45,5 +45,7 @@ namespace Rejex_UserRegistration
         {
             return Regex.IsMatch(input, PasswordRule3);
         }
+
+       
     }
 }

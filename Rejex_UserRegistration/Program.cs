@@ -22,6 +22,8 @@ namespace Rejex_UserRegistration
             bool result6 = userinfo.ValidatePasswordRule3("Shubham@123");
             Console.WriteLine(result6);
 
+            Reflection.ReflectionDemo();
+
             Console.ReadKey();
         }
     }
