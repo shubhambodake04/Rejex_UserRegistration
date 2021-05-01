@@ -6,7 +6,10 @@ namespace Rejex_UserRegistration
     {
         static void Main(string[] args)
         {
-            
+            UserInfo userinfo = new UserInfo();
+            bool result = userinfo.ValidateFirstName("Shubham");
+            Console.WriteLine(result);
+            Console.ReadKey();
         }
     }
 }
