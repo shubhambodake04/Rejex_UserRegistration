@@ -5,13 +5,14 @@ using System.Text.RegularExpressions;
 
 namespace Rejex_UserRegistration
 {
-    class UserInfo
+    public class UserInfo
     {
-        string FirstName = "^[A-Z][a-z]{2,}$";
+       const string FIRSTNAME = "^[A-Z][a-z]{2,}$";
 
-        public bool ValidateFirstName(string input)
+        public Func<string, bool> ValidateFirstName = (input) =>
         {
-            return Regex.IsMatch(input, FirstName);
-        }
+            return Regex.IsMatch(input, FIRSTNAME);
+        };
+        
     }
 }
