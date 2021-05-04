@@ -7,13 +7,15 @@ namespace Rejex_UserRegistration
 {
     class UserInfo
     {
-        string FirstName = "^[A-Z][a-z]{2,}$";
-        string LastName = "^[A-Z][a-z]{2,}$";
-        string Email = "^[a-z0-9A-Z]+([._+-@][a-z0-9A-Z]+)*[@][a-z0-9A-Z]+[.][a-zA-Z]{2,3}(.[a-zA-Z]{2})?$";
+        const string FIRSTNAME = "^[A-Z][a-z]{2,}$";
+        const string LASTNAME = "^[A-Z][a-z]{2,}$";
+        const string EMAIL = "^[a-z0-9A-Z]+([._+-][a-z0-9A-Z]+)*[@][a-z0-9A-Z]+[.][a-zA-Z]{2,3}(.[a-zA-Z]{2})?$";
 
-        public bool validateUserInfo(string input)
-        {
-            return Regex.IsMatch(input, Email);
-        }
+        public Func<string, bool> ValidateFirstName = (input) =>
+        { return Regex.IsMatch(input, FIRSTNAME); };
+        public Func<string, bool> ValidateLastName = (input) =>
+        { return Regex.IsMatch(input, LASTNAME); };
+        public Func<string, bool> ValidateEmail = (input) =>
+        { return Regex.IsMatch(input, EMAIL); };
     }
 }
