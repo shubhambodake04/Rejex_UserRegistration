@@ -7,6 +7,7 @@ namespace Rejex_UserRegistration
 {
     public class UserInfo
     {
+<<<<<<< HEAD
        public string FirstName = "^[A-Z][a-z]{2,}$";
        public string LastName = "^[A-Z][a-z]{2,}$";
        public string Email = "^[a-z0-9A-Z]+([._+-@][a-z0-9A-Z]+)*[@][a-z0-9A-Z]+[.][a-zA-Z]{2,3}(.[a-zA-Z]{2})?$";
@@ -16,9 +17,13 @@ namespace Rejex_UserRegistration
        public string PasswordRule3 = "^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8,20}$";
 
 
+=======
+       const string FIRSTNAME = "^[A-Z][a-z]{2,}$";
+>>>>>>> UC1_FIRSTNAME
 
-        public bool ValidateFirstName(string input)
+        public Func<string, bool> ValidateFirstName = (input) =>
         {
+<<<<<<< HEAD
             return Regex.IsMatch(input, FirstName);
         }
         public bool ValidateLastName(string input)
@@ -47,5 +52,10 @@ namespace Rejex_UserRegistration
         }
 
        
+=======
+            return Regex.IsMatch(input, FIRSTNAME);
+        };
+        
+>>>>>>> UC1_FIRSTNAME
     }
 }
