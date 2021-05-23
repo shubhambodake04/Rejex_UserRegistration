@@ -12,6 +12,7 @@ namespace Rejex_UserRegistration
             Type type = Type.GetType("Rejex_UserRegistration.UserInfo");
             Console.WriteLine("----Class: " +type.Name);
             Console.WriteLine("----Class: " + type.FullName);
+
             Console.WriteLine("Methods in customerInfo class");
             MethodInfo[] methods = type.GetMethods();
             foreach (MethodInfo method in methods)
